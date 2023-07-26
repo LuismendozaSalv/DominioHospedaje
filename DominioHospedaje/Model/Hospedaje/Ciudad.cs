@@ -11,13 +11,13 @@ namespace DominioHospedaje.Model.Hospedaje
     {
         public Guid CiudadId { get; private set; }
         public string Nombre { get; private set; }
-        public Guid PaisId { get; private set; }
+        public Pais Pais { get; private set; }
 
-        internal Ciudad(Guid ciudadId, string nombre, Guid paisId)
+        internal Ciudad(Guid ciudadId, string nombre, Pais pais)
         {
-            CiudadId = ciudadId;
-            Nombre = nombre; 
-            PaisId = paisId;
+            CiudadId = Guid.NewGuid();
+            Nombre = nombre;
+            Pais = pais;
         }
     }
 }

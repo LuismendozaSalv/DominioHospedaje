@@ -15,7 +15,7 @@ namespace DominioHospedaje.Model.Hospedaje
 
         internal Pais(Guid paisId, string nombre, string codigoPais)
         {
-            PaisId = paisId;
+            PaisId = Guid.NewGuid();
             Nombre = nombre;
             CodigoPais = codigoPais;
         }

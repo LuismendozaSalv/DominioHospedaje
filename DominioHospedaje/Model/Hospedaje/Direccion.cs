@@ -13,9 +13,9 @@ namespace DominioHospedaje.Model.Hospedaje
         public string Calle { get; init; }
         public string Avenida { get; init; }
         public int Numero { get; init; }
-        public Guid CiudadId { get; init; }
+        public string Referencia { get; init; }
 
-        internal Direccion(string calle, string avenida, int numero, Guid ciudadId)
+        internal Direccion(string calle, string avenida, int numero, string referencia)
         {
             CheckRule(new StringNotNullOrEmptyRule(calle));
             CheckRule(new StringNotNullOrEmptyRule(avenida));
@@ -23,7 +23,7 @@ namespace DominioHospedaje.Model.Hospedaje
             Calle = calle;
             Avenida = avenida;
             Numero = numero;
-            CiudadId = ciudadId;
+            Referencia = referencia;
         }
     }
 }
